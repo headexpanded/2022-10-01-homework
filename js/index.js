@@ -1,3 +1,10 @@
+/**
+ *
+ * A list of AFL clubs,  which can be sorted alphabetically.
+ *
+ */
+
+// list of AFL clubs
 let clubs = [
   "Adelaide",
   "Brisbane",
@@ -19,6 +26,7 @@ let clubs = [
   "Western Bulldogs",
 ];
 
+// create & populate list elements on start-up
 function buildTable() {
   for (let index = 0; index < clubs.length; index++) {
     const clubName = clubs[index];
@@ -28,7 +36,7 @@ function buildTable() {
     li.textContent = clubName;
   }
 }
-
+// user clicks button to sort
 const asc = document.body.querySelector("#sort");
 asc?.addEventListener("click", () => {
   clubs = clubs.reverse();
@@ -41,3 +49,5 @@ asc?.addEventListener("click", () => {
 
 const uList = document.body.querySelector("ul");
 buildTable();
+
+// END
